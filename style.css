@@ -1,0 +1,18 @@
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+}
+label {
+  margin-right: 1em;
+}
+section {
+  border-left: 4px solid #ccc;
+  padding-left: 1em;
+  margin-bottom: 1.5em;
+}
+[data-rule-type="statutory"] { border-color: #3399cc; }
+[data-rule-type="code_of_practice"] { border-color: #cc3366; }
+[data-rule-type="guidance"] { border-color: #66cc66; }
