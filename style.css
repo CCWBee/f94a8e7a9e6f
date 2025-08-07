@@ -71,31 +71,31 @@ section.clause {
 }
 
 /* Light Blue – statutory */
-[data-ruleType="statutory"] {
+[data-rule-type="statutory"] {
     background-color: rgba(173, 216, 230, 0.25);
     border-left-color: #00aaff;
 }
 
 /* Magenta (shown as red) – code_of_practice */
-[data-ruleType="code_of_practice"] {
+[data-rule-type="code_of_practice"] {
     background-color: rgba(255, 0, 128, 0.15);
     border-left-color: #ff0080;
 }
 
 /* Green – guidance */
-[data-ruleType="guidance"] {
+[data-rule-type="guidance"] {
     background-color: rgba(0, 128, 0, 0.12);
     border-left-color: #008000;
 }
 
 /* Blue/Grey – general_info */
-[data-ruleType="general_info"] {
+[data-rule-type="general_info"] {
     background-color: rgba(70, 130, 180, 0.12);
     border-left-color: #4682b4;
 }
 
 /* Yellow – always_show */
-[data-ruleType="always_show"] {
+[data-rule-type="always_show"] {
     background-color: rgba(255, 255, 0, 0.2);
     border-left-color: #cccc00;
 }
