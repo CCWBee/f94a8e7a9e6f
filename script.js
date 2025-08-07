@@ -11,6 +11,13 @@ const RULE_TYPE_ALIASES = {
 };
 
 function init() {
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("change", e => {
+      document.body.dataset.theme = e.target.checked ? "dark" : "light";
+    });
+  }
+
   fetch("policy.md")
     .then(r => r.text())
     .then(render)
