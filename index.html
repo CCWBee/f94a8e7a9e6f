@@ -6,23 +6,34 @@
   <title>NPO Handbook Viewer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-theme="light">
   <header class="main-header">
     <h1><span class="logo" aria-hidden="true">📘</span> NPO Handbook Viewer</h1>
   </header>
 
+  <section class="theme-switcher">
+    <label class="toggle">
+      <input type="checkbox" id="theme-toggle">
+      <span class="toggle-track"></span>
+      <span class="toggle-label">Dark mode</span>
+    </label>
+  </section>
+
   <section class="filters">
-    <label>
+    <label class="toggle">
       <input type="checkbox" class="filter" data-filter="rule_type" value="statutory" checked>
-      Light Blue
+      <span class="toggle-track"></span>
+      <span class="toggle-label">Light Blue</span>
     </label>
-    <label>
+    <label class="toggle">
       <input type="checkbox" class="filter" data-filter="rule_type" value="code_of_practice" checked>
-      Magenta
+      <span class="toggle-track"></span>
+      <span class="toggle-label">Magenta</span>
     </label>
-    <label>
+    <label class="toggle">
       <input type="checkbox" class="filter" data-filter="rule_type" value="guidance" checked>
-      Green
+      <span class="toggle-track"></span>
+      <span class="toggle-label">Green</span>
     </label>
   </section>
 
