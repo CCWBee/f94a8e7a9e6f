@@ -55,7 +55,7 @@ function applyFilters() {
     }, {});
 
   document.querySelectorAll("#content > section").forEach(sec => {
-    if (sec.dataset.ruleType === "always_show") {
+    if (sec.dataset.ruleType === "always_show" || sec.dataset.ruleType === "general_info") {
       sec.style.display = "";
       return;
     }
