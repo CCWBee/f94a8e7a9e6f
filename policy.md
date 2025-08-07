@@ -103,13 +103,13 @@ For further guidance as to whether you are a Prescribed NPO see our website: Lin
 - 13. The objectives of this Handbook are:
 > - to outline the relevant requirements of the Counter-Terrorism Legislation
 > - to set out the JFSC's requirements, expressed as NPO Codes of Practice - to be followed by all Prescribed NPOs
->     to assist Prescribed NPOs to comply with the requirements of the Counter-Terrorism Legislation and the NPO Codes of Practice, through practical interpretation
->     to outline good practice in developing systems and controls to prevent Prescribed NPOs from being used to facilitate the financing of terrorism
->     to provide a base from which Prescribed NPOs can design and implement systems and controls, and tailor their own policies and procedures, for the prevention and detection of the financing of terrorism
->     to ensure that Jersey meets with international standards to prevent and the financing of terrorism
->     to emphasise the responsibilities of the board and senior management of a Prescribed NPO (or their equivalent) in preventing and detecting the financing of terrorism
->     to emphasise the particulars the financing of terrorism risks of Prescribed NPOs
->     to provide an information resource to be used in training and raising awareness of the financing of terrorism.
+> -    to assist Prescribed NPOs to comply with the requirements of the Counter-Terrorism Legislation and the NPO Codes of Practice, through practical interpretation
+> -   to outline good practice in developing systems and controls to prevent Prescribed NPOs from being used to facilitate the financing of terrorism
+> -   to provide a base from which Prescribed NPOs can design and implement systems and controls, and tailor their own policies and procedures, for the prevention and detection of the financing of terrorism
+> -   to ensure that Jersey meets with international standards to prevent and the financing of terrorism
+> -   to emphasise the responsibilities of the board and senior management of a Prescribed NPO (or their equivalent) in preventing and detecting the financing of terrorism
+> -   to emphasise the particulars the financing of terrorism risks of Prescribed NPOs
+> -   to provide an information resource to be used in training and raising awareness of the financing of terrorism.
 - 14. This NPO Handbook will be reviewed on a regular basis and, where necessary following consultation, amended considering experience, changes in legislation, and the development of international standards.
 - 15. This NPO Handbook is intended to be used by NPOs in the development of a Prescribed NPO's systems and controls, and detailed policies and procedures. Each Prescribed NPO is expected to draw up its own policies and procedures based on the guidance set out in this NPO Handbook. These policies and procedures will also help senior management and staff to comply with their obligations under Counter-Terrorism Legislation. This NPO Handbook is not intended to be used by Prescribed NPOs as an internal procedures' manual, instead the Prescribed NPO is expected to draft its own bespoke policies and procedures, in line with the scope and scale of its organisation, activities and risk exposure.
 
@@ -1202,4 +1202,5 @@ In addition to this Glossary, Guidelines are published on the JFSC website in re
 | UK                                                        | The United Kingdom.                                          |
 | UN                                                        | The United Nations.                                          |
 | UNSC                                                      | The United Nations Security Council.                         |
+
 
