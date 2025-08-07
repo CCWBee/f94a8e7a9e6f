@@ -13,23 +13,21 @@ function render(markdown) {
   const container = document.getElementById("content");
   container.innerHTML = "";
 
-  const blocks = markdown.split(/^\s*---\s*$/m);          // split on '---' lines
+  const blocks = markdown.split(/(?=<!--\s*rule_type)/); // split at metadata boundaries
   blocks.forEach(block => {
-    const meta = extractMeta(block);                      // {rule_type, applies_to}
-
-    // Skip meta-only blocks (e.g. TOC) if needed
-    const core = block.replace(/<!--[\s\S]*?-->/, "").trim();
-    if (!core) return;
+    const meta = extractMeta(block);
+    const content = block.replace(/<!--[\s\S]*?-->/, '').trim();
+    if (!content) return;
 
     const node = document.createElement("section");
     node.className = "clause";
     node.dataset.rule_type = meta.rule_type || "unknown";
     node.dataset.applies_to = meta.applies_to || "unknown";
-    node.innerHTML = marked.parse(core);
+    node.innerHTML = marked.parse(content);
     container.appendChild(node);
   });
 
-  applyFilters();     // run once on initial load
+  applyFilters();
 }
 
 function extractMeta(text) {
@@ -57,8 +55,7 @@ function applyFilters() {
     }, {});
 
   document.querySelectorAll("#content > section").forEach(sec => {
-    if (sec.dataset.rule_type === "general_info" && sec.dataset.applies_to === "all") {
-      // always-show: never hide
+    if (sec.dataset.rule_type === "always_show") {
       sec.style.display = "";
       return;
     }
