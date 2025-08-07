@@ -13,11 +13,15 @@ function render(markdown) {
   const container = document.getElementById("content");
   container.innerHTML = "";
 
-  const blocks = markdown.split(/(?=<!--\s*rule_type)/); // split at metadata boundaries
-  blocks.forEach(block => {
-    const meta = extractMeta(block);
-    const content = block.replace(/<!--[\s\S]*?-->/, '').trim();
-    if (!content) return;
+  // Split the markdown so that each metadata comment applies to the
+  // content immediately preceding it.  The array alternates between
+  // content and the inner text of the metadata comment.
+  const parts = markdown.split(/<!--([\s\S]*?)-->/);
+
+  for (let i = 0; i < parts.length - 1; i += 2) {
+    const content = parts[i].trim();
+    const meta = extractMeta(`<!--${parts[i + 1]}-->`);
+    if (!content) continue;
 
     const node = document.createElement("section");
     node.className = "clause";
@@ -25,7 +29,18 @@ function render(markdown) {
     node.dataset.appliesTo = meta.applies_to || "unknown";
     node.innerHTML = marked.parse(content);
     container.appendChild(node);
-  });
+  }
+
+  // Any trailing content without metadata is rendered with default styling.
+  const tail = parts[parts.length - 1].trim();
+  if (tail) {
+    const node = document.createElement("section");
+    node.className = "clause";
+    node.dataset.ruleType = "unknown";
+    node.dataset.appliesTo = "unknown";
+    node.innerHTML = marked.parse(tail);
+    container.appendChild(node);
+  }
 
   applyFilters();
 }
