@@ -1,4 +1,4 @@
-/*  NPO Handbook viewer – client-side parser & filter  */
+// NPO Handbook viewer – client-side parser & filter
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -21,8 +21,8 @@ function render(markdown) {
 
     const node = document.createElement("section");
     node.className = "clause";
-    node.dataset.rule_type = meta.rule_type || "unknown";
-    node.dataset.applies_to = meta.applies_to || "unknown";
+    node.dataset.ruleType = meta.rule_type || "unknown";
+    node.dataset.appliesTo = meta.applies_to || "unknown";
     node.innerHTML = marked.parse(content);
     container.appendChild(node);
   });
@@ -55,7 +55,7 @@ function applyFilters() {
     }, {});
 
   document.querySelectorAll("#content > section").forEach(sec => {
-    if (sec.dataset.rule_type === "always_show") {
+    if (sec.dataset.ruleType === "always_show") {
       sec.style.display = "";
       return;
     }
