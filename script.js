@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", init);
 
 let definitions = {};
 
+// Map non-standard rule_type tags to canonical values
+const RULE_TYPE_ALIASES = {
+  bluegrey: "general_info",
+  alwaysshow: "general_info"
+};
+
 function init() {
   fetch("policy.md")
     .then(r => r.text())
@@ -39,7 +45,8 @@ function render(markdown) {
 function addClause(container, content, meta = {}) {
   const node = document.createElement("section");
   node.className = "clause";
-  node.dataset.ruleType = meta.rule_type || "unknown";
+  const rt = RULE_TYPE_ALIASES[meta.rule_type] || meta.rule_type;
+  node.dataset.ruleType = rt || "unknown";
   node.dataset.appliesTo = meta.applies_to || "unknown";
   node.innerHTML = marked.parse(content);
   container.appendChild(node);
@@ -61,6 +68,12 @@ function attachFilterListeners() {
 }
 
 function applyFilters() {
+  const allFilters = [...document.querySelectorAll(".filter")]
+    .reduce((acc, el) => {
+      (acc[el.dataset.filter] ??= new Set()).add(el.value);
+      return acc;
+    }, {});
+
   const checks = [...document.querySelectorAll(".filter:checked")]
     .reduce((acc, el) => {
       (acc[el.dataset.filter] ??= new Set()).add(el.value);
@@ -72,10 +85,15 @@ function applyFilters() {
       sec.style.display = "";
       return;
     }
-    const visible = Object.entries(checks).every(([k, set]) => {
+
+    const visible = Object.entries(allFilters).every(([k, allVals]) => {
       const key = k.replace(/_([a-z])/g, (_, c) => c.toUpperCase());
-      return set.has(sec.dataset[key]);
+      const value = sec.dataset[key];
+      if (!allVals.has(value)) return true;
+      const set = checks[k];
+      return set?.has(value);
     });
+
     sec.style.display = visible ? "" : "none";
   });
 }
