@@ -59,9 +59,10 @@ function applyFilters() {
       sec.style.display = "";
       return;
     }
-    const visible = Object.entries(checks).every(
-      ([k, set]) => set.has(sec.dataset[k])
-    );
+    const visible = Object.entries(checks).every(([k, set]) => {
+      const key = k.replace(/_([a-z])/g, (_, c) => c.toUpperCase());
+      return set.has(sec.dataset[key]);
+    });
     sec.style.display = visible ? "" : "none";
   });
 }
