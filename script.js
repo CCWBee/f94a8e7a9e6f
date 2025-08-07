@@ -14,42 +14,35 @@ function render(markdown) {
   container.innerHTML = "";
 
   // Split the markdown so that each metadata comment applies to the
-  // content immediately preceding it.  The array alternates between
+  // content immediately following it. The array alternates between
   // content and the inner text of the metadata comment.
   const parts = markdown.split(/<!--([\s\S]*?)-->/);
 
-  for (let i = 0; i < parts.length - 1; i += 2) {
-    const content = parts[i].trim();
-    const meta = extractMeta(`<!--${parts[i + 1]}-->`);
+  const first = parts[0].trim();
+  if (first) addClause(container, first, {});
+
+  for (let i = 1; i < parts.length; i += 2) {
+    const meta = extractMeta(parts[i]);
+    const content = parts[i + 1]?.trim();
     if (!content) continue;
-
-    const node = document.createElement("section");
-    node.className = "clause";
-    node.dataset.ruleType = meta.rule_type || "unknown";
-    node.dataset.appliesTo = meta.applies_to || "unknown";
-    node.innerHTML = marked.parse(content);
-    container.appendChild(node);
-  }
-
-  // Any trailing content without metadata is rendered with default styling.
-  const tail = parts[parts.length - 1].trim();
-  if (tail) {
-    const node = document.createElement("section");
-    node.className = "clause";
-    node.dataset.ruleType = "unknown";
-    node.dataset.appliesTo = "unknown";
-    node.innerHTML = marked.parse(tail);
-    container.appendChild(node);
+    addClause(container, content, meta);
   }
 
   applyFilters();
 }
 
+function addClause(container, content, meta = {}) {
+  const node = document.createElement("section");
+  node.className = "clause";
+  node.dataset.ruleType = meta.rule_type || "unknown";
+  node.dataset.appliesTo = meta.applies_to || "unknown";
+  node.innerHTML = marked.parse(content);
+  container.appendChild(node);
+}
+
 function extractMeta(text) {
   const out = {};
-  const m = text.match(/<!--([\s\S]*?)-->/);
-  if (!m) return out;
-  m[1].split(/\n/).forEach(line => {
+  text.split(/\n/).forEach(line => {
     const [k, ...v] = line.split(":");
     if (k && v.length) out[k.trim()] = v.join(":").trim().toLowerCase();
   });
