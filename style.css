@@ -1,18 +1,131 @@
-
+/* Base Layout */
 body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 2rem auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+    background: #f9f9f9;
+    color: #222;
 }
-label {
-  margin-right: 1em;
+
+/* Headings */
+h1, h2, h3, h4 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.25em;
+    margin-top: 2rem;
 }
-section {
-  border-left: 4px solid #ccc;
-  padding-left: 1em;
-  margin-bottom: 1.5em;
+
+/* Code blocks */
+pre, code {
+    background-color: #eee;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
 }
-[data-rule-type="statutory"] { border-color: #3399cc; }
-[data-rule-type="code_of_practice"] { border-color: #cc3366; }
-[data-rule-type="guidance"] { border-color: #66cc66; }
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters label {
+    background: #ddd;
+    padding: 0.3rem 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters input[type="checkbox"] {
+    margin-right: 0.3rem;
+}
+
+/* Content Sections */
+.section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 6px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* === Debug Highlighting === */
+
+/* Rule types */
+[data-rule-type="statutory"] {
+    background-color: rgba(173, 216, 230, 0.3); /* Light Blue */
+    border-left-color: #add8e6;
+}
+[data-rule-type="code_of_practice"] {
+    background-color: rgba(255, 0, 255, 0.2); /* Magenta */
+    border-left-color: #ff00ff;
+}
+[data-rule-type="guidance"] {
+    background-color: rgba(144, 238, 144, 0.3); /* Green */
+    border-left-color: #90ee90;
+}
+[data-rule-type="general_info"] {
+    background-color: rgba(200, 200, 200, 0.2); /* Grey */
+    border-left-color: #999;
+}
+[data-rule-type="always_show"] {
+    background-color: rgba(255, 255, 224, 0.4); /* Pale yellow */
+    border-left-color: #cccc66;
+}
+
+/* Applies-to labels (optional, not shown, but used for debugging) */
+[data-applies-to="prescribed_npo"]::before {
+    content: "[Prescribed NPO] ";
+    font-weight: bold;
+    color: #333;
+}
+[data-applies-to="all"]::before {
+    content: "[All NPOs] ";
+    font-weight: bold;
+    color: #333;
+}
+[data-applies-to="always"]::before {
+    content: "[Always Show] ";
+    font-weight: bold;
+    color: #333;
+}
+
+/* Markdown cleanup */
+hr {
+    border: none;
+    border-top: 1px dashed #aaa;
+    margin: 2rem 0;
+}
+
+blockquote {
+    border-left: 5px solid #ccc;
+    padding-left: 1em;
+    margin-left: 0;
+    color: #555;
+    background-color: #f4f4f4;
+}
+
+/* Footer/debug info */
+footer {
+    margin-top: 2rem;
+    font-size: 0.9em;
+    text-align: center;
+    color: #777;
+}
