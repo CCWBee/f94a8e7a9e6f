@@ -131,6 +131,23 @@ header.main-header .logo {
 
 .toggle input:checked + .toggle-track::after {
   transform: translateX(1rem);
+  background: var(--color-accent);
+}
+
+/* Rule type-specific toggle colours */
+.toggle-statutory input:checked + .toggle-track,
+.toggle-statutory input:checked + .toggle-track::after {
+  background: var(--stat);
+}
+
+.toggle-code input:checked + .toggle-track,
+.toggle-code input:checked + .toggle-track::after {
+  background: var(--cop);
+}
+
+.toggle-guidance input:checked + .toggle-track,
+.toggle-guidance input:checked + .toggle-track::after {
+  background: var(--guidance);
 }
 
 .toggle-label {
