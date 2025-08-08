@@ -189,12 +189,11 @@ applies_to: all
 - iv) Article 10 of the NPO Law, all NPOs must keep their financial records and retain them for at least 5 years.
 - v) Article 13 of the NPO Law, NPOs must, upon being requested to do so, provide a person with details of its purpose, objectives and intended activities; and details of its structure.
 - vi) Article 13A of NPO Law, additional obligations are imposed on a Prescribed NPO, or a NPO that belongs to a prescribed class of NPOs, to reduce their risk of being used to assist terrorism or the financing of terrorism or becoming likely to assist or be used to assist terrorism or the financing of terrorism, in line with the FATF's Recommendation 8:
-> obligation to prepare annual financial statement;
-> obligation to have appropriate accounting systems and controls;
-> obligation to keep records of owners, controllers etc.;
-> obligation to keep record of significant donors;
-
-> obligations to identify its associate NPOs and beneficiaries, to obtain information about their activities and the nature and purpose of its relationship with them, to confirm that they are not assisting or being used to assist terrorism or the financing of terrorism.
+> *obligation to prepare annual financial statement;
+> *obligation to have appropriate accounting systems and controls;
+> *obligation to keep records of owners, controllers etc.;
+> *obligation to keep record of significant donors;
+> *obligations to identify its associate NPOs and beneficiaries, to obtain information about their activities and the nature and purpose of its relationship with them, to confirm that they are not assisting or being used to assist terrorism or the financing of terrorism.
 - 37. Each Prescribed NPO in Jersey must recognise the role that it must play in protecting itself, its staff, employees and volunteers from involvement in the financing of terrorism and in protecting the Island's reputation including the trust of the donor community.
 - 38. The JFSC strongly believes that the key to the prevention and detection of the financing of terrorism, lies in the implementation of, and strict adherence to, effective systems and controls, based on international standards. The NPO Handbook therefore establishes standards which match international standards issued by the Financial Action Task Force (FATF). The NPO Handbook takes account of the requirements of EU legislation to the financing of terrorism and its application of standards set by the FATF.
 <!--
@@ -224,8 +223,8 @@ applies_to: all
 
 ## Overview
 
-- 1. The April 2022 the National Risk Assessment for NPOs (the NPO NRA) identified around 11% of Jersey-based NPOs as being particularly vulnerable to being abused for terrorist financing purposes.
-- 2. This sub-sector of NPOs may be more vulnerable to terrorist financing abuse due to one or more of the following factors:
+> - 1. The April 2022 the National Risk Assessment for NPOs (the NPO NRA) identified around 11% of Jersey-based NPOs as being particularly vulnerable to being abused for terrorist financing purposes.
+> - 2. This sub-sector of NPOs may be more vulnerable to terrorist financing abuse due to one or more of the following factors:
 
 > operating in higher-risk jurisdictions, such as conflict zones, failed states and disaster areas, where support such as humanitarian aid and disaster relief is desperately needed, and which equally are areas where terrorists also are known to undertake activities;
 > using associate NPOs ;
@@ -234,13 +233,13 @@ applies_to: all
 - 4. The Financial Action Task Force has described the likelihood of Diversion as being dependent on three factors:
 - 5. This means that the closeness of a terrorist actor to the NPO and its NPO programme plays a part. It explains why some countries, jurisdictions and areas, as well as the areas adjacent to them, are treated as being more exposed to terrorist financing risk than others. Equally, if the NPO has access to resources that the terrorist actor values, this brings heightened risk. The terrorist actor must also have both the intent and capability to take advantage of the NPO.
 - 6. Examples of how Diversion may take place include:
-> terrorist s posing as legitimate NPO Beneficiaries to benefit from NPO programmes, such as receiving NPO Funds ;
-> terrorist s appearing to act as ordinary associate NPOs, at the same time as abusing NPO Resources by diverting NPO Funds to support their activities.
+> - terrorist s posing as legitimate NPO Beneficiaries to benefit from NPO programmes, such as receiving NPO Funds ;
+> - terrorist s appearing to act as ordinary associate NPOs, at the same time as abusing NPO Resources by diverting NPO Funds to support their activities.
 - 7. Diversion risk may increase where an NPO:
-> does not properly invest in its terrorist financing risk control framework on grounds of cost;
-> is too focused on assisting NPO Beneficiaries at the expense of accountability or effective risk management;
-> has a high-risk appetite, and a low level of terrorist financing risk controls;
-> takes the view that if no incidents are reported, or that the diverted value is small, the risk of terrorist financing abuse is negligible. It is worth reflecting that even when utilising small amounts, a bad actor can cause great harm. For example, the cost of assembling a dangerous homemade explosive device can require only a relatively small amount of funds.
+> - does not properly invest in its terrorist financing risk control framework on grounds of cost;
+> - is too focused on assisting NPO Beneficiaries at the expense of accountability or effective risk management;
+> - has a high-risk appetite, and a low level of terrorist financing risk controls;
+> - takes the view that if no incidents are reported, or that the diverted value is small, the risk of terrorist financing abuse is negligible. It is worth reflecting that even when utilising small amounts, a bad actor can cause great harm. For example, the cost of assembling a dangerous homemade explosive device can require only a relatively small amount of funds.
 - 8. Diversion risk can also increase where a NPO does not adequately manage ' Transfer risk ', i.e., the risk that Diversion will take place where funds are transferred to associate NPOs. High-quality associate NPOs can reduce terrorist financing risk, with their local knowledge and relationships providing an additional level of information and control to the NPO. However, poor due diligence can increase the terrorist financing risk. Some associate NPOs may be sympathetic to, infiltrated by, or under the control of, terrorist elements. Alternatively, they may not have strong terrorist financing controls and may inadvertently finance terrorist activities.
 - 9. Ceding control of funds does not cede responsibility for their destination. Associate NPO selection, due diligence and oversight forms a crucial part of responsible NPO activity.
 - 10. The offence of terrorist financing is broad in nature and scope. For the purposes of the NPO Handbook, it is defined as:
@@ -1202,5 +1201,6 @@ In addition to this Glossary, Guidelines are published on the JFSC website in re
 | UK                                                        | The United Kingdom.                                          |
 | UN                                                        | The United Nations.                                          |
 | UNSC                                                      | The United Nations Security Council.                         |
+
 
 
